@@ -17,7 +17,7 @@
 struct queueStruct
 {
 	int N_t;
-	int data[];
+	int data[N];
 	size_t front;
 	size_t rear;
 };
