@@ -2,7 +2,8 @@
  * queue.c
  *
  *  Created on: Jun. 15, 2020
- *      Author: vy
+ *      Instructor: Taski Zourntos
+ *      Modified by Vy
  */
 
 #include <stdio.h>
@@ -12,7 +13,6 @@
 
 bool queueEmpty(queue_t *s)
 {
-
 	if (s->front ==-1 || s->front > s->rear)
 	{
 		printf("Queue underflow.\n");
@@ -23,15 +23,14 @@ bool queueEmpty(queue_t *s)
 }
 void enqueue(queue_t *s,int x)
 {
-	if((s->rear) == (s->N_t--)) // condition for overflow queue, which is when index read = L-1
+	if((s->rear) == (s->N_t--)) 	// condition for overflow queue
 		printf("Queue Overflow\n");
 	else
 	{
-
 		if(s->front == -1)
-		s-> front = 0; //assign "pointer" front to index 0
-		s-> rear = s-> rear + 1; //increase the index of rear
-		s->data[(s-> rear)] = x;//assign value to the index at q[rear]
+		s-> front = 0; 				//assign "pointer" front to index 0
+		s-> rear = s-> rear + 1; 	//increase the index of rear
+		s->data[(s-> rear)] = x;	//assign value to the index at q[rear]
 		printf("Index rear at:%zu, Element enqueue is:%d\n", s-> rear, s-> data[s->rear]);
 	}
 	return;
@@ -39,6 +38,6 @@ void enqueue(queue_t *s,int x)
 }
 void dequeue(queue_t *s)
 {
-	printf("Front is at index: %d, Removed element is %d\n",s->front, s->data[(s->front)]);
-			s->front=s->front+1;
+	printf("Front is at index: %zu, Removed element is %d\n",s->front, s->data[(s->front)]);
+	s->front=s->front+1;
 }

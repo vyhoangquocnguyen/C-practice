@@ -2,7 +2,8 @@
  * queue.h
  *
  *  Created on: Jun. 15, 2020
- *      Author: vy
+ *      Instructor: Taski Zourntos
+ *      Modified by Vy
  */
 
 #ifndef QUEUE_H_
@@ -12,7 +13,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define N = 1024
+#define N 1024
 
 struct queueStruct
 {
