@@ -1,13 +1,12 @@
 /*
  ============================================================================
  Name        : ese2025week6.c
- Author      : Vy
+ Author      : takis
+ Modified by : Vy
  Version     :
  Copyright   : Your copyright notice
  Description : , Ansi-style
  ============================================================================
- *  Created on: Jun. 29, 2020
- *      Author: takis
  */
 
 
@@ -55,6 +54,7 @@ int main(void)
 	// Insert node function (middle)
 	data_key_t insertPoint ;
 	char ans;
+	printf("Do you want to insert a node? ");
 	for(;;)
 	{
 		scanf("%c",&ans);
@@ -77,26 +77,43 @@ int main(void)
 			break;
 		}
 		else if(ans == 'n' || ans =='N')
-			break;
-		else
 		{
-			printf("Do you want to insert a node? Please answer y or n\n");
+			printf("Bye bye\n");
+			break;
 		}
+		else
+			printf("Do you want to insert a node? Please answer y or n\n");
 	}
 
 
 	// Deleting a node
 	data_key_t deletingNode;
 	char del;
-	scanf("&c",del);
 	for (;;)
 	{
-		scanf("&c",del);
-		if (del == 'y'||'Y')
+		scanf("%c",&del);
+		if (del == 'y'|| del =='Y')
 		{
-
+			printf("Enter the node position you want to delete: \n");
+			scanf("%u",&deletingNode);
+			deleteNode(pLLHead,deletingNode);
+			ll_t *pW = pLLHead;
+			while (pW != NULL)
+			{
+				token.X = pW->payload.X;
+				token.Y = pW->payload.Y;
+				token.key = pW->payload.key;
+				printf("%lf %lf %lu\n", token.X, token.Y, token.key);
+				pW = pW->pNext;
+			}
+			break;
 		}
-
+		else if (del == 'n'|| del == 'N')
+		{
+			break;
+		}
+		else
+			printf("Do you want to delete a node?, Enter y or n\n");
 	}
 	return 0;
 }

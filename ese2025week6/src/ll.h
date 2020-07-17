@@ -2,9 +2,8 @@
  * ll_t.h
  *
  *  Created on: Jul. 13, 2020
- *      Author: vy
- *  Created on: Jun. 29, 2020
  *      Author: takis
+ *      Modified by Vy
  */
 
 #ifndef DSTRUCTS_LL_H_
