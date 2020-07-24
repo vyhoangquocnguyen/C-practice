@@ -56,7 +56,7 @@ float Median(vector<int> thearr)
 {
 	float Median;
 	if ((thearr.size() % 2) == 0)
-		Median = (thearr[thearr.size()/2]+thearr[(thearr.size()/2)-1])/2;
+		Median = (thearr[thearr.size()/2]+thearr[(thearr.size()/2)-1])/2.0f;
 	else
 		Median = thearr[(thearr.size()/2)];
 	return Median;
@@ -64,27 +64,26 @@ float Median(vector<int> thearr)
 int main()
 {
 	/* store integers in a vector from standard input */
-	vector<int> myarr;	// our container
-	int token; 			// our container content variable
+	vector<int> myarr;					// our container
+	int token; 							// our container content variable
 	cout << "Please enter some integers, followed by <CTRL><D>:" << endl;
-	while (cin >> token) // loop exits when user enters <CTRL><D>
+	while (cin >> token) 				// loop exits when user enters <CTRL><D>
 	{
 		myarr.push_back(token);
 	}
 	cout << endl << endl;
 
 	/* print integers from vector */
-	cout << "Your integers are:" << endl;
+	cout << "Your integer array are:" << endl;
 	for (vector<int>::size_type j = 0; j != myarr.size(); ++j)
 	{
-		cout << myarr[j] << endl;
+		cout << " " << myarr[j];
 	}
 	cout << endl;
 
 	/* The largest integer */
 	int max = Max(myarr);
 	cout << endl << "The largest integer in the array is: " << max << endl;
-
 	/*The smallest integer*/
 	int min = Min(myarr);
 	cout << endl << "The smallest integer in the array is: " << min << endl;
