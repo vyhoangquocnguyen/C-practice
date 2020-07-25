@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm> // this library contain min_element and max_element built-in
 
 using std::vector;
 using std::cout;
@@ -90,6 +91,24 @@ int main()
 	/* The Median integer*/
 	float median = Median(myarr);
 	cout << endl << "The median of the array is: " << median << endl;
+	/*
+	 * Maximum, Minimum, Median using built - in functions
+	 */
+	cout << "Using built in functions"<< endl << endl;
+	/* Maximum integer */
+	cout << "The maximum integer is " << *std::max_element(myarr.begin(),myarr.end())<< endl;
+	/* Minumum integer */
+	cout << "The minimum integer is " << *std::min_element(myarr.begin(),myarr.end())<< endl;
+	/*
+	 * Built in function for sorting an array
+	 */
+	sort(myarr.begin(),myarr.end());
+	cout << "The sorted array is"<<endl;
+		for (vector<int>::size_type j = 0; j != myarr.size(); ++j)
+		{
+			cout << " " << myarr[j];
+		}
+		cout << endl;
 
 	/* exit happily */
 	return 0;
