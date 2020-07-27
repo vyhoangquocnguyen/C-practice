@@ -3,13 +3,9 @@
 // Author      : Vy
 // Version     :
 // Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Description : , Ansi-style
 //============================================================================
 
-/*
- * fl.cpp
- *
- */
 
 #include <iostream>
 #include <vector>
@@ -37,7 +33,6 @@ int Max(vector<int> thearr)
 		++i;
 	}
 	return max;
-
 }
 int Min(vector<int> thearr)
 {
@@ -84,13 +79,13 @@ int main()
 
 	/* The largest integer */
 	int max = Max(myarr);
-	cout << endl << "The largest integer in the array is: " << max << endl;
+	cout << "The largest integer in the array is: " << max << endl;
 	/*The smallest integer*/
 	int min = Min(myarr);
-	cout << endl << "The smallest integer in the array is: " << min << endl;
+	cout << "The smallest integer in the array is: " << min << endl;
 	/* The Median integer*/
 	float median = Median(myarr);
-	cout << endl << "The median of the array is: " << median << endl;
+	cout << "The median of the array is: " << median << endl << endl;
 	/*
 	 * Maximum, Minimum, Median using built - in functions
 	 */
@@ -109,6 +104,7 @@ int main()
 			cout << " " << myarr[j];
 		}
 		cout << endl;
+	cout << "The Median after sorting the array: " << Median(myarr) << endl;
 
 	/* exit happily */
 	return 0;
