@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm> // this library contain min_element and max_element built-in
+#include <numeric>
 
 using std::vector;
 using std::cout;
@@ -57,6 +58,19 @@ float Median(vector<int> thearr)
 		Median = thearr[(thearr.size()/2)];
 	return Median;
 }
+float Average(vector<int> thearr)
+{
+	float average;
+	float sum = 0.f;
+	vector<int>::size_type i =0;
+	while (i != thearr.size())
+	{
+		sum = sum + thearr[i];
+		++i;
+	}
+	average = sum / thearr.size();
+	return average;
+}
 int main()
 {
 	/* store integers in a vector from standard input */
@@ -83,17 +97,22 @@ int main()
 	/*The smallest integer*/
 	int min = Min(myarr);
 	cout << "The smallest integer in the array is: " << min << endl;
+	/* The Average */
+	float average = Average(myarr);
+	cout << "The Average of the array is: " << average << endl;
 	/* The Median integer*/
 	float median = Median(myarr);
-	cout << "The median of the array is: " << median << endl << endl;
+	cout << "The median of the array is: " << median << endl;
 	/*
 	 * Maximum, Minimum, Median using built - in functions
 	 */
 	cout << "Using built in functions"<< endl << endl;
 	/* Maximum integer */
 	cout << "The maximum integer is " << *std::max_element(myarr.begin(),myarr.end())<< endl;
-	/* Minumum integer */
+	/* Minimum integer */
 	cout << "The minimum integer is " << *std::min_element(myarr.begin(),myarr.end())<< endl;
+	/* Average */
+	cout << "The Average:" << accumulate(myarr.begin(), myarr.end(), 0.0) / myarr.size() << endl;
 	/*
 	 * Built in function for sorting an array
 	 */
