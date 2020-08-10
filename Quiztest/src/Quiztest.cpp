@@ -125,7 +125,7 @@ int main()
 		indv = test(indv);
 		victims.push_back(indv);
 		cout << "Student Name: " << indv.name << "--- Score: " << indv.score
-				<< endl << endl;
+				<< endl << "Next!" << endl << endl;
 	}
 	/*Sorting and Displaying the result.*/
 	sort(victims.begin(), victims.end(), result_sorter);
